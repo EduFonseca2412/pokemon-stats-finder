@@ -17,7 +17,7 @@ function App() {
       console.log(barType);
       console.log(pokemon);
     } catch (error) {
-      console.log(error);
+      console.log("oops we did not find that pokemon!");
     }
   };
 
@@ -59,7 +59,10 @@ function App() {
               <div className="pokemon-meta">
                 <span className="pokemon-name">{pokemon.name}</span>
                 {pokemon.types.map((slot) => (
-                  <span className={"type-badge " + `${slot.type.name}`}>
+                  <span
+                    key={crypto.randomUUID()}
+                    className={"type-badge " + `${slot.type.name}`}
+                  >
                     {slot.type.name}
                   </span>
                 ))}

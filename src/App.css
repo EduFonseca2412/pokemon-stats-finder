@@ -178,6 +178,7 @@ body {
   border-radius: 26px;
   padding: 48px 56px 56px;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
 
   background:
     radial-gradient(
@@ -709,21 +710,29 @@ body {
     var(--normal-3) 100%
   );
 }
-/* .hp {
-  width: 39%;
+
+@media (max-width: 984px) {
+  .pokedex-card {
+    padding: 32px 22px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    justify-items: center;
+  }
+
+  .stats {
+    width: 100%;
+  }
+
+  .stat {
+    grid-template-columns: 85px 1fr 40px;
+    gap: 10px;
+  }
+
+  .image-ring {
+    width: 180px;
+    height: 180px;
+  }
 }
-.attack {
-  width: 52%;
-}
-.defense {
-  width: 43%;
-}
-.special-attack {
-  width: 60%;
-}
-.special-defense {
-  width: 50%;
-}
-.speed {
-  width: 65%;
-} */
