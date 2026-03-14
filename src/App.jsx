@@ -28,45 +28,58 @@ function App() {
   };
 
   return (
-    <div className="card">
-      <form action="submit" onSubmit={handleSubmit} className="form">
-        <label htmlFor="pokemonSearch">
-          Pesquise um pokemon por nome ou id
-        </label>
-        <input
-          id="pokemonSearch"
-          placeholder="Procure algum pokemon"
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        ></input>
-        <button type="submit" className="btn-search">
-          Buscar
-        </button>
-      </form>
+    <div className="card-border">
+      <section className="pokedex-card">
+        <form className="search-area" action="submit" onSubmit={handleSubmit}>
+          <h1>Pesquise um pokémon por nome ou id</h1>
+          <input
+            type="text"
+            placeholder="charmander"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button type="submit">Buscar</button>
+        </form>
 
-      {pokemon?.game_indices && (
-        <div className="infoBox">
-          <div className="mainCard">
-            <div className="pokemon-image">
-              <img src={pokemon?.sprites?.front_default} alt="" />
-            </div>
-            <p>{pokemon?.name}</p>
-          </div>
-
-          <div className="stats">
-            {pokemon.stats.map((stat) => (
-              <div className="stat" key={crypto.randomUUID()}>
-                <span className="stat-name">{stat.stat.name}</span>
-                <div className="stat-bar">
-                  <div className="stat-fill"></div>
+        {pokemon?.game_indices && (
+          <div className="content">
+            <div className="pokemon-side">
+              <div className="image-ring">
+                <div className="image-core">
+                  <img
+                    src={pokemon?.sprites?.front_default}
+                    alt="pokemon image"
+                  />
                 </div>
-                <span className="stat-value">{stat.base_stat}</span>
               </div>
-            ))}
+
+              <div className="pokemon-meta">
+                <span className="pokemon-name">{pokemon.name}</span>
+                {pokemon.types.map((slot) => (
+                  <span className={"type-badge " + `${slot.type.name}`}>
+                    {slot.type.name}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="stats">
+              {pokemon.stats.map((stat) => (
+                <div className="stat" key={crypto.randomUUID()}>
+                  <span>{stat.stat.name}</span>
+                  <div className="bar">
+                    <div
+                      className={"fill"}
+                      style={{ width: `${(stat.base_stat / 255) * 100}%` }}
+                    ></div>
+                  </div>
+                  <strong>{stat.base_stat}</strong>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </section>
     </div>
   );
 }
