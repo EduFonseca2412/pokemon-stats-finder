@@ -546,9 +546,169 @@ body {
   height: 100%;
   border-radius: inherit;
   box-shadow: 0 0 10px rgba(255, 120, 70, 0.18);
-  background: linear-gradient(90deg, #bf352d 0%, #ff6a3c 45%, #e8bf58 100%);
 }
 
+.fill.fire {
+  background: linear-gradient(
+    90deg,
+    var(--fire-1) 0%,
+    var(--fire-2) 45%,
+    var(--fire-3) 100%
+  );
+}
+
+.fill.water {
+  background: linear-gradient(
+    90deg,
+    var(--water-1) 0%,
+    var(--water-2) 45%,
+    var(--water-3) 100%
+  );
+}
+
+.fill.grass {
+  background: linear-gradient(
+    90deg,
+    var(--grass-1) 0%,
+    var(--grass-2) 45%,
+    var(--grass-3) 100%
+  );
+}
+
+.fill.electric {
+  background: linear-gradient(
+    90deg,
+    var(--electric-1) 0%,
+    var(--electric-2) 45%,
+    var(--electric-3) 100%
+  );
+}
+
+.fill.ice {
+  background: linear-gradient(
+    90deg,
+    var(--ice-1) 0%,
+    var(--ice-2) 45%,
+    var(--ice-3) 100%
+  );
+}
+
+.fill.fighting {
+  background: linear-gradient(
+    90deg,
+    var(--fighting-1) 0%,
+    var(--fighting-2) 45%,
+    var(--fighting-3) 100%
+  );
+}
+
+.fill.poison {
+  background: linear-gradient(
+    90deg,
+    var(--poison-1) 0%,
+    var(--poison-2) 45%,
+    var(--poison-3) 100%
+  );
+}
+
+.fill.ground {
+  background: linear-gradient(
+    90deg,
+    var(--ground-1) 0%,
+    var(--ground-2) 45%,
+    var(--ground-3) 100%
+  );
+}
+
+.fill.flying {
+  background: linear-gradient(
+    90deg,
+    var(--flying-1) 0%,
+    var(--flying-2) 45%,
+    var(--flying-3) 100%
+  );
+}
+
+.fill.psychic {
+  background: linear-gradient(
+    90deg,
+    var(--psychic-1) 0%,
+    var(--psychic-2) 45%,
+    var(--psychic-3) 100%
+  );
+}
+
+.fill.bug {
+  background: linear-gradient(
+    90deg,
+    var(--bug-1) 0%,
+    var(--bug-2) 45%,
+    var(--bug-3) 100%
+  );
+}
+
+.fill.rock {
+  background: linear-gradient(
+    90deg,
+    var(--rock-1) 0%,
+    var(--rock-2) 45%,
+    var(--rock-3) 100%
+  );
+}
+
+.fill.ghost {
+  background: linear-gradient(
+    90deg,
+    var(--ghost-1) 0%,
+    var(--ghost-2) 45%,
+    var(--ghost-3) 100%
+  );
+}
+
+.fill.dragon {
+  background: linear-gradient(
+    90deg,
+    var(--dragon-1) 0%,
+    var(--dragon-2) 45%,
+    var(--dragon-3) 100%
+  );
+}
+
+.fill.dark {
+  background: linear-gradient(
+    90deg,
+    var(--dark-1) 0%,
+    var(--dark-2) 45%,
+    var(--dark-3) 100%
+  );
+}
+
+.fill.steel {
+  background: linear-gradient(
+    90deg,
+    var(--steel-1) 0%,
+    var(--steel-2) 45%,
+    var(--steel-3) 100%
+  );
+}
+
+.fill.fairy {
+  background: linear-gradient(
+    90deg,
+    var(--fairy-1) 0%,
+    var(--fairy-2) 45%,
+    var(--fairy-3) 100%
+  );
+}
+
+.fill.normal {
+  background: linear-gradient(
+    90deg,
+    var(--normal-1) 0%,
+    var(--normal-2) 45%,
+    var(--normal-3) 100%
+  );
+}
 /* .hp {
   width: 39%;
 }

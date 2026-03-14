@@ -5,6 +5,7 @@ function App() {
   const [input, setInput] = useState("");
   const [pokemonSearch, setPokemonSearch] = useState("");
   const [pokemon, setPokemon] = useState(null);
+  const [barType, setBarType] = useState(null);
   const fetchPokemon = async function (pokemonName) {
     try {
       const response = await fetch(
@@ -12,6 +13,8 @@ function App() {
       );
       const pokemon = await response.json();
       setPokemon(pokemon);
+      setBarType(pokemon.types[0].type.name);
+      console.log(barType);
       console.log(pokemon);
     } catch (error) {
       console.log(error);
@@ -69,7 +72,7 @@ function App() {
                   <span>{stat.stat.name}</span>
                   <div className="bar">
                     <div
-                      className={"fill"}
+                      className={`fill ${barType}`}
                       style={{ width: `${(stat.base_stat / 255) * 100}%` }}
                     ></div>
                   </div>
